@@ -1,0 +1,22 @@
+language: java
+  
+jdk:
+  - openjdk7
+  - openjdk8
+  - openjdk9 
+  - oraclejdk10
+  - oraclejdk8
+ # - oraclejdk9
+ 
+build:
+
+  pre_ci_boot:
+    image_name: drydock/c7javall
+    image_tag: master
+    pull: true
+    
+  ci:
+    - java -version
+    - echo $SHIPPABLE_JDK_VERSION
+    - mvn --version    
+    - ant -version 
