@@ -12,7 +12,7 @@ build:
 
   pre_ci_boot:
     image_name: drydock/c7javall
-    image_tag: master
+    image_tag: v6.8.4
     pull: true
     
   ci:
